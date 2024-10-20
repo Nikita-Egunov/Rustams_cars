@@ -45,11 +45,11 @@ function toggleActive(buttonID, itemID) {
 const firstSwiper = new Swiper(".firstSwiper", {
     modules: [Navigation, Pagination],
     navigation: {
-        nextEl: ".swiper-button-next--main",
-        prevEl: ".swiper-button-prev--main",
+        nextEl: ".swiper-button-next--main__firstSlider",
+        prevEl: ".swiper-button-prev--main__firstSlider",
     },
     pagination: {
-        el: ".swiper-pagination--firstSwiper",
+        el: ".swiper-pagination--firstSwiper--treker",
         clickable: true
     },
 });
@@ -57,8 +57,8 @@ const firstSwiper = new Swiper(".firstSwiper", {
 const SwiperInner = new Swiper(".swiper__inner", {
     modules: [Navigation],
     navigation: {
-        nextEl: ".swiper-button-next--inner",
-        prevEl: ".swiper-button-prev--inner",
+        nextEl: ".swiper-button-next--inner__firstSlider",
+        prevEl: ".swiper-button-prev--inner__firstSlider",
     },
 });
 
@@ -92,6 +92,26 @@ const forms = [
 forms.forEach(([formID, buttonID]) => {
     sendForm(formID, buttonID)
 })
+
+const thirdSwiper = new Swiper(".thirdSwiper", {
+    modules: [Pagination, Navigation],
+    navigation: {
+        nextEl: ".swiper-button-next--main__thirdSlider",
+        prevEl: ".swiper-button-prev--main__thirdSlider",
+    },
+    pagination: {
+        el: ".swiper-pagination--thirdSwiper",
+        clickable: true
+    },
+})
+
+const SwiperInner__third = new Swiper(".swiper__inner", {
+    modules: [Navigation],
+    navigation: {
+        nextEl: ".swiper-button-next--inner__thirdSlider",
+        prevEl: ".swiper-button-prev--inner__thirdSlider",
+    },
+});
 
 const toggleActiveArray = [
     ['humber-btn', 'modal'],

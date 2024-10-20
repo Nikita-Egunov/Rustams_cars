@@ -11,4 +11,9 @@ export default defineConfig({
       },
     },
   },
+  postcss: {
+    plugins: [
+        require('autoprefixer')
+    ]
+  }
 });

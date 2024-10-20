@@ -651,181 +651,184 @@ html:has(.modal.active) {
                 }
 
                 .firstSwiper {
-                    max-width: 1160px;
-                    max-height: 570px;
-                    margin-top: 137px;
-                    overflow-x: hidden;
+                    &--styles {
+                        max-width: 1160px;
+                        max-height: 570px;
+                        margin-top: 137px;
+                        overflow-x: hidden;
 
-                    @media (width <=1150px) {
-                        max-height: fit-content;
-                    }
+                        @media (width <=1150px) {
+                            max-height: fit-content;
+                        }
 
-                    .swiper-wrapper--firstSwiper {
-                        .swiper-slide--firstSwiper {
-                            position: relative;
+                        .swiper-wrapper--firstSwiper {
+                            .swiper-slide--firstSwiper {
+                                position: relative;
 
-                            display: grid;
-                            grid-template-areas:
-                                "logo cost"
-                                "slider list"
-                            ;
-                            gap: 50px;
-
-                            background-color: #1C1C1C;
-                            border-radius: 15px;
-
-                            align-items: start;
-                            justify-content: start;
-                            text-align: start;
-
-                            padding: 50px;
-
-                            @media (width <=1150px) {
+                                display: grid;
                                 grid-template-areas:
                                     "logo cost"
-                                    "slider slider"
-                                    "list list"
+                                    "slider list"
                                 ;
-                                justify-content: center;
-                            }
+                                gap: 50px;
 
-                            @media (width <=650px) {
-                                grid-template-areas:
-                                    "logo logo"
-                                    "cost cost"
-                                    "slider slider"
-                                    "list list"
-                                ;
-                                justify-content: center;
-                            }
+                                background-color: #1C1C1C;
+                                border-radius: 15px;
 
-                            @media (width <=550px) {
-                                padding: 10px;
-                            }
+                                align-items: start;
+                                justify-content: start;
+                                text-align: start;
 
-                            .line {
-                                position: absolute;
-                                height: 570px;
-                                border-right: 1px solid #515151;
-                                left: 52%;
+                                padding: 50px;
 
                                 @media (width <=1150px) {
-                                    display: none;
-                                }
-                            }
-
-                            .swiper-slide__item {
-                                &--1 {
-                                    grid-area: logo;
-                                }
-
-                                &--2 {
-                                    grid-area: cost;
+                                    grid-template-areas:
+                                        "logo cost"
+                                        "slider slider"
+                                        "list list"
+                                    ;
+                                    justify-content: center;
                                 }
 
-                                &--3 {
-                                    grid-area: slider;
+                                @media (width <=650px) {
+                                    grid-template-areas:
+                                        "logo logo"
+                                        "cost cost"
+                                        "slider slider"
+                                        "list list"
+                                    ;
+                                    justify-content: center;
                                 }
 
-                                &--4 {
-                                    grid-area: list;
+                                @media (width <=550px) {
+                                    padding: 10px;
                                 }
 
-                                .logo {
-                                    display: flex;
-                                    align-items: center;
+                                .line {
+                                    position: absolute;
+                                    height: 100%;
+                                    border-right: 1px solid #515151;
+                                    left: 52%;
 
-                                    .logo__img {
-                                        max-width: 80px;
-                                        margin-right: 20px;
-                                    }
-
-                                    .logo__text {
-                                        color: #FFFFFF;
-
-                                        span {
-                                            color: #a5a5a5;
-                                            display: flex;
-                                            justify-content: start;
-                                        }
+                                    @media (width <=1150px) {
+                                        display: none;
                                     }
                                 }
 
-                                .cost {
-                                    color: #FFFFFF;
-                                    text-align: end;
-
-                                    @media (width <=650px) {
-                                        text-align: start;
-                                    }
-                                }
-
-                                .swiper__inner {
-                                    max-width: 522px;
-                                    max-height: 330px;
-
-                                    @media (width <=555px) {
-                                        max-width: 300px;
+                                .swiper-slide__item {
+                                    &--1 {
+                                        grid-area: logo;
                                     }
 
-                                    @media (width <=340px) {
-                                        max-width: 200px;
+                                    &--2 {
+                                        grid-area: cost;
                                     }
 
-                                    .swiper-slide__swiper__inner {
-                                        border-radius: 15px;
-                                    }
-                                }
-
-                                .list {
-                                    display: grid;
-                                    grid-template-columns: repeat(2, 1fr);
-                                    grid-template-rows: repeat(6, 1fr);
-                                    max-height: 228px;
-
-                                    @media (width <=550px) {
-                                        gap: 20px;
+                                    &--3 {
+                                        grid-area: slider;
                                     }
 
-                                    .list__item {
+                                    &--4 {
+                                        grid-area: list;
+                                    }
+
+                                    .logo {
                                         display: flex;
+                                        align-items: center;
 
-                                        .icon {
-                                            box-sizing: content-box;
-                                            padding: 10px;
-                                            border: 1px solid #0030AB;
-                                            border-radius: 10px;
-                                            max-width: 40px;
-                                            max-height: 40px;
-                                            margin-right: 15px;
-
-                                            @media (width <=350px) {
-                                                display: none;
-                                            }
+                                        .logo__img {
+                                            max-width: 80px;
+                                            margin-right: 20px;
                                         }
 
-                                        .item__text {
+                                        .logo__text {
                                             color: #FFFFFF;
 
                                             span {
-                                                color: #A1A1A1;
+                                                color: #a5a5a5;
+                                                display: flex;
+                                                justify-content: start;
                                             }
                                         }
                                     }
-                                }
 
-                                .button {
-                                    display: inline-flex;
-                                    border-radius: 99px;
-                                    padding: 18px 22.5%;
-                                    background: linear-gradient(to right, #1A82B7, #0030AB);
-                                    color: #FFFFFF;
+                                    .cost {
+                                        color: #FFFFFF;
+                                        text-align: end;
 
-                                    margin-top: 37px;
+                                        @media (width <=650px) {
+                                            text-align: start;
+                                        }
+                                    }
 
-                                    &::after {
-                                        content: url(../icons/link_icon.svg);
-                                        margin-left: 10px;
+                                    .swiper__inner {
+                                        max-width: 522px;
+                                        max-height: 330px;
+
+                                        @media (width <=555px) {
+                                            max-width: 300px;
+                                        }
+
+                                        @media (width <=340px) {
+                                            max-width: 200px;
+                                        }
+
+                                        .swiper-slide__swiper__inner {
+                                            border-radius: 15px;
+                                        }
+                                    }
+
+                                    .list {
+                                        display: grid;
+                                        grid-template-columns: repeat(2, 1fr);
+                                        grid-template-rows: repeat(6, 1fr);
+                                        max-height: 228px;
+                                        gap: 30px;
+
+                                        @media (width <=550px) {
+                                            gap: 20px;
+                                        }
+
+                                        .list__item {
+                                            display: flex;
+
+                                            .icon {
+                                                box-sizing: content-box;
+                                                padding: 10px;
+                                                border: 1px solid #0030AB;
+                                                border-radius: 10px;
+                                                max-width: 40px;
+                                                max-height: 40px;
+                                                margin-right: 15px;
+
+                                                @media (width <=350px) {
+                                                    display: none;
+                                                }
+                                            }
+
+                                            .item__text {
+                                                color: #FFFFFF;
+
+                                                span {
+                                                    color: #A1A1A1;
+                                                }
+                                            }
+                                        }
+                                    }
+
+                                    .button {
+                                        display: inline-flex;
+                                        border-radius: 99px;
+                                        padding: 18px 22.5%;
+                                        background: linear-gradient(to right, #1A82B7, #0030AB);
+                                        color: #FFFFFF;
+
+                                        margin-top: 37px;
+
+                                        &::after {
+                                            content: url(../icons/link_icon.svg);
+                                            margin-left: 10px;
+                                        }
                                     }
                                 }
                             }
@@ -1290,6 +1293,7 @@ html:has(.modal.active) {
                                 height: 21px;
 
                                 margin-left: 10px;
+
                                 &::before {
                                     content: "";
 
@@ -1326,6 +1330,7 @@ html:has(.modal.active) {
                                         transition-duration: 0.5s;
                                         rotate: 0deg;
                                     }
+
                                     &::after {
                                         transition-duration: 0.5s;
                                         rotate: 90deg;
@@ -1351,27 +1356,187 @@ html:has(.modal.active) {
     .section {
         &--6 {
             padding-top: 180px;
+            height: 1000px;
+
             .conteiner {
                 .title {
+                    text-align: center;
                     color: #FFFFFF;
+
+                    margin-bottom: 118px;
+
+                    @media (width <=1300px) {
+                        margin-bottom: 50px;
+                    }
                 }
-                .work-list {
-                    
-                    .work__item {
-                        color: #FFFFFF;
-                        &::marker {
-                            background: linear-gradient(to right, #1A82B7, #0030AB);
-                            background-clip: text;
-                            -webkit-text-fill-color: transparent;
+
+                .conteiner__inner {
+                    display: flex;
+                    justify-content: space-between;
+                    padding: 30px;
+
+                    .work-list {
+
+                        .work__item {
+                            &:not(:last-child) {
+                                margin-bottom: 29px;
+                            }
+
+                            color: #FFFFFF;
+
+                            &::marker {
+                                color: #1A82B7;
+                            }
+                        }
+                    }
+
+                    .work__img {
+                        max-width: 291px;
+                        max-height: 231px;
+                        filter: drop-shadow(0px 10px 50px rgba(34, 218, 41, 0.3));
+
+                        @media (width <=950px) {
+                            margin-top: 30px;
                         }
                     }
                 }
-                .work__img {
-                    max-width: 291px;
-                    max-height: 231px;
-                    filter: drop-shadow(0px 10px 50px rgba(34, 218, 41, 0.3));
+            }
+        }
+    }
+    .section {
+        &--7 {
+            padding-top: 268px;
+            padding-bottom: 180px;
+            .conteiner {
+                display: flex;
+                max-width: 1160px;
+                max-height: 520px;
+                overflow: hidden;
+
+                border-radius: 15px;
+                .conteiner__inner {
+                    margin: 0;
+                    padding: 0px;
+                    &:not(:first-child) {
+                        padding: 78px;
+                        border-left: 1px solid #A1A1A1;
+                        @media (width <= 400px) {
+                            padding: 20px;
+                        }
+                    }
+                    .img__tgk {
+                        
+                        max-width: 100%;
+                        max-height: 100%;
+                        @media (width <= 1000px) {
+                            display: none;
+                        }
+                    }
+                    .title {
+                        margin-bottom: 15px;
+                    }
+                    .text {
+                        margin-bottom: 25px;
+                    }
+                    .contact {
+                        display: flex;
+                        align-items: center;
+                        color: #FFFFFF;
+                        &:not(:last-child) {
+                            margin-bottom: 30px;
+                        }
+                        &--1 {
+                            &::before {
+                                content: url(../icons/youTube_icon.svg);
+                                margin-right: 23px;
+                            }
+                        }
+                        &--2 {
+                            &::before {
+                            content: url(../icons/telegram_icon.svg);
+                            margin-right: 23px;
+                            }
+                        }
+                        &--3 {
+                            &::before {
+                            content: url(../icons/whatsApp_icon.svg);
+                            margin-right: 23px;
+                            }
+                        }
+                    }
                 }
             }
+        }
+    }
+}
+
+.footer {
+    background-color: #000000;
+    padding: 20px;
+    .conteiner__inner {
+        display: flex;
+        justify-content: space-between;
+        &:not(:first-child) {
+            margin-top: 104px;
+
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-template-rows: repeat(2, 1fr);
+            gap: 50px;
+            @media (width <= 750px) {
+                grid-template-columns: 1fr;
+                grid-template-rows: repeat(6, 1fr);
+                gap: 20px;
+            }
+        }
+        
+        .nav__logo {
+            display: flex;
+            color: #FFFFFF;
+            gap: 20px;
+            @media (width <= 400px) {
+                flex-direction: column;
+            }
+        }
+        .inner__inner {
+            .contact {
+                &--1 {
+                    content: url(/icons/phone-calling-swg_icon.svg);
+                    margin-left: auto;
+                    border-radius: 50%;
+                    background: radial-gradient(circle, hsla(0, 0%, 32%, 0.25), hsla(0, 0%, 32%, 0.25));
+                    border: 1px solid #515151;
+                    padding: 10px;
+                }
+                &--2 {
+                    content: url(/icons/plain-svg_icon.svg);
+                    margin-left: auto;
+                    border-radius: 50%;
+                    background: radial-gradient(circle, hsla(0, 0%, 32%, 0.25), hsla(0, 0%, 32%, 0.25));
+                    border: 1px solid #515151;
+                    padding: 10px;
+
+                    margin-left: 34px;
+                    @media (width <= 950px) {
+                        margin-left: 5px;
+                    }
+                }
+            }
+        }
+        .item {
+            color: #A1A1A1;
+            &:nth-child(3), &:nth-child(6) {
+                text-align: end;
+                @media (width <= 950px) {
+                    text-align: start;
+                }
+            }
+            &:nth-child(2), &:nth-child(5) {
+                text-align: center;
+                @media (width <= 950px) {
+                    text-align: start;
+                }
+            }    
         }
     }
 }
